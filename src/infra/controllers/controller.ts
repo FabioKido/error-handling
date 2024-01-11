@@ -8,7 +8,9 @@ export const name = async(req: Request, res: Response) => {
     if(name.length < 4) throw new BadRequestError('Nome menor que o esperado...')
     console.log(name)
 
-    res.end()
+    res.json({
+        name
+    })
 }
 
 export const file = (req: Request, res: Response) => {
